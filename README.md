@@ -1,1 +1,1 @@
-# css-parallax
+# CSS Parallax
