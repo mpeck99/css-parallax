@@ -136,10 +136,14 @@ p, a {
   animation: clear 0.5s forwards;
 }
 
-section .inner {
+.section .inner {
   padding: 1rem;
 }
 
+.section .inner h2 {
+  text-align: center;
+  font-size: 3rem;
+}
 .site-header .header-title {
   transform: translateY(10rem);
   opacity: 0;
