@@ -171,6 +171,32 @@ p, a {
   transform: translateY(-2rem);
   animation: slideDown 0.5s 1.8s forwards, pulse 2s 4s ease-in-out infinite;
 }
+
+/* Monster group/cards */
+
+#monster-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.monster {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.monster img {
+  max-width: 20rem;
+  width: 100%;
+  height: auto;
+}
+
+.monster h3 {
+  padding-top: 1rem ;
+
 }
 
 /* Animations */
