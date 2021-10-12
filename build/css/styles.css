@@ -10,8 +10,41 @@
   --body: 'Montserrat', sans-serif;
 }
 
-/* Basic style elements */
+/* Backgrounds */
+.bg--blue {
+  background-color: var(--blue);
+}
 
+.bg--charcol {
+  background-color: var(--charcol);
+}
+
+.bg--coral {
+  background-color: var(--coral);
+}
+
+.bg--teal {
+  background-color: var(--teal);
+}
+
+/* Font colors */
+.fc--blue {
+  color: var(--blue);
+}
+
+.fc--coral {
+  color: var(--coral);
+}
+
+.fc-teal {
+  color: var(--teal);
+}
+
+.fc--white {
+  color: var(--white);
+}
+
+/* Basic style elements */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading), Arial, Helvetica, sans-serif;
 }
@@ -21,39 +54,44 @@ p, a {
 }
 
 /* Site navigation */
-
 .site-nav {
   position: fixed;
   z-index: 20;
 }
 
-.site-nav .nav-link, a {
+.site-nav .nav-link {  
   position: relative;
   padding-bottom: 2px;
+
+  color: var(--white);
+  font-weight: 700;
 }
 
-.site-nav .nav-link::before, a:before{
+.site-nav .nav-link:before{
   content: '';
   
   width: 100%;
   max-width: 100px;
-  height: 2px;
+  height: 43px;
   
   position: absolute;
   bottom: 0;
   left: 0;
   
-  background-color: var(--coral);
+  background-color: rgba(255,105,120,1);
   
-  visibility: hidden;
+  transform: scale(0);
+  transition: all 3s cubic-bezier(0.03, 0.78, 0.4, 1.39);
+  opacity: 0;
+
 }
 
-a:before {
-  max-width: 100%;
-}
 
-.site-nav .nav-link:hover::before,.site-nav .nav-link:focus::before,  a:hover:before, a:focus:before {
-  visibility: visible;
+.site-nav .nav-link:hover::before,.site-nav .nav-link:focus::before {
+  background-color: rgba(255,105,120,0.5);
+  
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 /* Site header */
@@ -83,47 +121,42 @@ a:before {
   background-size:cover;
   background-position: bottom;
 
-  transform: rotate(-15deg) translateY(-50%) scale(2);
-  opacity: 0.8;
+  transform: translateY(300px) scale(1.2);
+  opacity: 0;
+  animation: clear 0.5s forwards;
 }
 
 section .inner {
   padding: 1rem;
 }
 
-/* Backgrounds */
-.bg--charcol {
-  background-color: var(--charcol);
+.site-header .header-title {
+  transform: translateY(10rem);
+  opacity: 0;
+
+  animation: clear 0.8s 0.4s forwards;
 }
 
-.fc-teal {
-  color: var(--teal);
+.site-header .header-subtitle {
+  transform: translateY(10rem);
+  opacity: 0;
+
+  animation: clear 1s 0.7s forwards;
 }
 
-.fc--blue {
-  color: var(--blue);
+/* Header cue */
+.site-header .header--cue {
+  transform: translateY(2rem);
+  z-index: 10;
+  overflow: hidden;
+
+  animation: clear 0.5s 1.5s forwards
 }
 
-.fc--coral {
-  color: var(--coral);
-}
-
-.fc--white {
-  color: var(--white);
-}
-
-a:hover, a:focus {
-  color: var(--coral);
-
-  text-decoration: none;
-}
-
-.navbar-nav .nav-link, a {
-  color: var(--white) !important;
-}
-
-a:hover, a:focus, .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
-  color: var(--white);
-
-  opacity: 0.9;
+/* Animations */
+@keyframes clear {
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
