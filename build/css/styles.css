@@ -164,7 +164,13 @@ p, a {
   z-index: 10;
   overflow: hidden;
 
-  animation: clear 0.5s 1.5s forwards
+  animation: clear 0.5s 1.5s forwards;
+}
+
+.site-header .header--cue-icn {
+  transform: translateY(-2rem);
+  animation: slideDown 0.5s 1.8s forwards, pulse 2s 4s ease-in-out infinite;
+}
 }
 
 /* Animations */
