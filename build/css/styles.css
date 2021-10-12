@@ -206,3 +206,32 @@ p, a {
     transform: none;
   }
 }
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+ 0% {
+  transform: none; 
+  transform: scale(1);
+
+  opacity: 1;
+ }
+ 50% { 
+  transform: scale(0.8);
+  opacity: 0.5;
+ }
+ 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
