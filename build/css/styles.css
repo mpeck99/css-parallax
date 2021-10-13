@@ -109,6 +109,13 @@ p, a {
   opacity: 1;
 }
 
+.site-nav.in-body {
+  background-color: var(--charcol);
+
+  animation: clear 1s forwards;
+
+  opacity: 0;
+}
 /* Site header */
 .site-header { 
   height: 100vh;
