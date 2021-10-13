@@ -87,10 +87,10 @@ p, a {
   
   width: 100%;
   max-width: 100px;
-  height: 43px;
+  height: 4.5rem;
   
   position: absolute;
-  bottom: 0;
+  bottom: -1rem;
   left: 0;
   
   background-color: rgba(255,105,120,1);
