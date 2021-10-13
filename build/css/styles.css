@@ -76,7 +76,6 @@ p, a {
 
 .site-nav .nav-link {  
   position: relative;
-  padding-bottom: 2px;
 
   color: var(--white);
   font-weight: 700;
@@ -101,11 +100,10 @@ p, a {
 
 }
 
-
 .site-nav .nav-link:hover::before,.site-nav .nav-link:focus::before {
   background-color: rgba(255,105,120,0.5);
   
-  transform: scaleX(1);
+  transform: scaleX(0.9);
   opacity: 1;
 }
 
@@ -116,6 +114,8 @@ p, a {
 
   opacity: 0;
 }
+
+
 /* Site header */
 .site-header { 
   height: 100vh;
@@ -148,9 +148,59 @@ p, a {
   animation: clear 0.5s forwards;
 }
 
+.section {
+  padding: 4rem 2rem;
+}
+
+.section .icon {
+  max-width: 8rem;
+  
+}
+
 .section .inner {
   padding: 1rem;
 }
+
+.content {
+  opacity: 0;
+}
+
+.inner-col {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.inner-col img  {
+  max-width: 14rem;
+
+  margin-bottom: 2rem;
+}
+
+.inner-col .content {
+  text-align: center;
+}
+
+@media (min-width: 767px) {
+  .inner-col {
+    max-width: 900px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+  }
+
+  .inner-col img {
+    margin-bottom: 0;
+  }
+}
+
+
 
 .section .inner h2 {
   text-align: center;
@@ -173,11 +223,18 @@ p, a {
 
 /* Header cue */
 .site-header .header--cue {
+  position: absolute;
+  bottom: 0;
+
   transform: translateY(2rem);
   z-index: 10;
   overflow: hidden;
 
-  animation: clear 0.5s 1.5s forwards;
+  animation: clear 1s 1.5s forwards;
+}
+
+.site-header .header--cue.hidden {
+  display: none;
 }
 
 .site-header .header--cue-icn {
@@ -213,11 +270,19 @@ p, a {
 
 }
 
+.appear {
+  animation: clear 1s 0.5s forwards;
+  opacity: 0;
+
+  transform: scale(0.9);
+}
+
 /* Animations */
 @keyframes clear {
   to {
     opacity: 1;
     transform: none;
+    webkit-transform: translate3d(0,0,0);
   }
 }
 
