@@ -70,6 +70,8 @@ p, a {
 .site-nav {
   position: fixed;
   z-index: 20;
+
+  padding: 1rem;
 }
 
 .site-nav .nav-link {  
