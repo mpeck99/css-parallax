@@ -1,0 +1,331 @@
+:root {
+  /* Variables */
+  --blue: #66fcf1;
+  --teal: #45a29e;
+
+  --coral: #ff6978;
+  --charcol: #333;
+  --white : #fff;
+  --heading: 'Staatliches', cursive;
+  --body: 'Montserrat', sans-serif;
+}
+
+/* Backgrounds */
+.bg--blue {
+  background-color: var(--blue);
+}
+
+.bg--charcol {
+  background-color: var(--charcol);
+}
+
+.bg--coral {
+  background-color: var(--coral);
+}
+
+.bg--teal {
+  background-color: var(--teal);
+}
+
+.bg--white {
+  background-color: var(--white);
+}
+
+
+/* Font colors */
+.fc--blue {
+  color: var(--blue);
+}
+
+.fc--coral {
+  color: var(--coral);
+}
+
+.fc--charcol {
+  color: var(--charcol);
+}
+
+.fc--teal {
+  color: var(--teal);
+}
+
+.fc--white {
+  color: var(--white);
+}
+
+/* Basic style elements */
+body {
+  font-size: 18px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading), Arial, Helvetica, sans-serif;
+}
+
+p, a {
+  font-family: var(--body);
+  font-size: 1.25rem;
+
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Site navigation */
+.site-nav {
+  position: fixed;
+  z-index: 20;
+
+  padding: 1rem;
+}
+
+.site-nav .nav-link {  
+  position: relative;
+
+  color: var(--white);
+  font-weight: 700;
+}
+
+.site-nav .nav-link:before{
+  content: '';
+  
+  width: 100%;
+  max-width: 100px;
+  height: 4.5rem;
+  
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  
+  background-color: rgba(255,105,120,1);
+  
+  transform: scale(0);
+  transition: all 0.5s cubic-bezier(0.03, 0.78, 0.4, 1.39);
+  opacity: 0;
+
+}
+
+.site-nav .nav-link:hover::before,.site-nav .nav-link:focus::before {
+  background-color: rgba(255,105,120,0.5);
+  
+  transform: scaleX(0.9);
+  opacity: 1;
+}
+
+.site-nav.in-body {
+  background-color: var(--charcol);
+
+  animation: clear 1s forwards;
+
+  opacity: 0;
+}
+
+
+/* Site header */
+.site-header { 
+  height: 100vh;
+  
+  position: relative;
+ 
+  background: linear-gradient(180deg, var(--teal), var(--charcol));
+
+  overflow: hidden;
+}
+
+.site-header:before {
+  content: '';
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  z-index: 5;
+
+  background-image: url(../images/hero.svg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: bottom;
+
+  transform: translateY(300px) scale(1.2);
+  opacity: 0;
+  animation: clear 0.5s forwards;
+}
+
+.section {
+  padding: 4rem 2rem;
+
+  overflow: hidden;
+}
+
+.section .icon {
+  max-width: 8rem;
+  
+}
+
+.section .inner {
+  padding: 1rem;
+}
+
+
+.inner-col {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.inner-col img  {
+  max-width: 14rem;
+
+  margin-bottom: 2rem;
+}
+
+.inner-col .content {
+  text-align: center;
+}
+
+@media (min-width: 767px) {
+  .inner-col {
+    max-width: 950px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100%;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+  }
+
+  .inner-col img {
+    margin-bottom: 0;
+  }
+}
+
+.section--full {
+  min-height: 100vh;
+  padding-top: 8rem;
+}
+
+.section .inner h2 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.site-header .header-title {
+  transform: translateY(10rem);
+  opacity: 0;
+
+  animation: clear 0.8s 0.4s forwards;
+}
+
+.site-header .header-subtitle {
+  transform: translateY(10rem);
+  opacity: 0;
+
+  animation: clear 1s 0.7s forwards;
+}
+
+/* Header cue */
+.site-header .header--cue {
+  position: absolute;
+  bottom: 0;
+
+  transform: translateY(2rem);
+  z-index: 10;
+  overflow: hidden;
+
+  animation: clear 1s 1.5s forwards;
+}
+
+.site-header .header--cue.hidden {
+  display: none;
+}
+
+.site-header .header--cue-icn {
+  transform: translateY(-2rem);
+  animation: slideDown 0.5s 1.8s forwards, pulse 2s 4s ease-in-out infinite;
+}
+
+
+/* Monster group/cards */
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.monster {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.monster img {
+  max-width: 20rem;
+  width: 100%;
+  height: auto;
+}
+
+.monster h3 {
+  padding-top: 1rem ;
+
+}
+
+.appear {
+  animation: clear 1s 0.5s forwards;
+  opacity: 0;
+
+  transform: scale(0.9);
+}
+
+/* Cards */
+
+
+
+/* Animations */
+@keyframes clear {
+
+  to {
+    opacity: 1;
+    transform: none;
+    webkit-transform: translate3d(0,0,0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-2rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+ 0% {
+  transform: none; 
+  transform: scale(1);
+
+  opacity: 1;
+ }
+ 50% { 
+  transform: scale(0.8);
+  opacity: 0.5;
+ }
+ 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

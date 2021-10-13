@@ -1,0 +1,163 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script defer src="js/lib/fontawesome-all.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+  <title>CSS Scrolling & Parallax</title>
+</head>
+
+<body>
+  <!-- Navigation built from bootstrap classes -->
+  <nav class="site-nav navbar navbar-expand-md navbar-dark w-100">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-normal" href="#hero">
+        <i class="fas fa-code mr-2"></i>Home
+      </a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <section class="collapse navbar-collapse" id="myTogglerNav">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-item nav-link fc--white" href="#meet">Meet</a>
+          <a class="nav-item nav-link fc--white" href="#friend">Friend</a>
+          <a class="nav-item nav-link fc--white" href="#Types">Types</a>   
+          <a class="nav-item nav-link fc--white" href="#Hire">Hire</a>   
+        </div>
+      </section>
+    </div>
+  </nav>
+  
+  <header id="hero" class="site-header bg--charcol">
+    <section class="layout-hero d-flex flex-column fc--white min-vh-100">
+      <div class="header-content d-flex flex-column flex-fill">
+        <div class="d-flex flex-column container justify-content-center align-items-center flex-fill text-center">
+          <h1 class="header-title display-2">CSS Scrolling & Parallax</h1>
+          <p class="header-subtitle lead font-weight-lighter">This is a little living example of CSS Scrolling & Parallax.</p>
+        </div>
+      </div>
+      <div class="header--cue text-center w-100 align-self-end bg--white">
+        <i class="header--cue-icn fas fa-chevron-down fc--coral"></i>
+      </div>
+    </section>
+  </header>
+
+  <section id="meet" aria-labelledby="meetTitle" class="section">
+    <div class="inner min-vh-100">
+      <h2 id="meetTitle">Meet</h2>
+      <div id="monster-group" class="wrapper">
+        <div class="monster">
+          <img src="./images/monsters/monster01_tn.svg" alt="Monster image 1">
+          <h3>George</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster02_tn.svg" alt="Monster image 2">
+          <h3>Melville</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster03_tn.svg" alt="Monster image 3">
+          <h3>Morgana</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster04_tn.svg" alt="Monster image 4">
+          <h3>Thumbalina</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster05_tn.svg" alt="Monster image 5">
+          <h3>Orville</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster06_tn.svg" alt="Monster image 6">
+          <h3>Paul</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster07_tn.svg" alt="Monster image 7">
+          <h3>Terry Hamkins</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster08_tn.svg" alt="Monster image 8">
+          <h3>Militia Trucker</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster09_tn.svg" alt="Monster image 9">
+          <h3>Karen</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster10_tn.svg" alt="Monster image 10">
+          <h3>Coco</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster11_tn.svg" alt="Monster image 11">
+          <h3>JayJay</h3>
+        </div>
+        <div class="monster">
+          <img src="./images/monsters/monster12_tn.svg" alt="Monster image 12">
+          <h3>T-Pain</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section  aria-labelledby="friendTitle" class="section bg--blue">
+    <div class="inner inner-col min-vh-100" id="friend">
+      <img src="./images/floater.svg" alt="Parachuting monster" id="parachute">
+      <div class="content">
+        <h2 id="friendTitle" class="fc--coral">You've Got a Friend</h2>
+        <p class="mb-0">Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit??, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.
+        </p>
+      </div>
+    </div>
+  </section>
+   <section id="Types" aria-labelledby="TypesTitle" class="section section--types bg--coral section--full">
+    <div class="inner">
+      <h2 id="TypesTitle" class="mb-4 fc--white">Monster Types</h2>
+      <div class="row row-cols-1 row-cols-md-3">
+        <div class="col text-center">
+          <img src="./images/icon01.svg" class="icon" alt="Monster with horns" id="type-horns">
+          <h2>Horns</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt deleniti natus eveniet harum laudantium cum nam vel quo? Maiores aperiam sunt possimus velit tenetur dolorem molestiae eaque mollitia esse nobis.</p>
+        </div>
+        <div class="col text-center">
+          <img src="./images/icon02.svg" class="icon" alt="Monster with tentacles" id="type-tentacles">
+          <h2>Tentacles</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt deleniti natus eveniet harum laudantium cum nam vel quo? Maiores aperiam sunt possimus velit tenetur dolorem molestiae eaque mollitia esse nobis.</p>
+        </div>
+        <div class="col text-center">
+          <img src="./images/icon03.svg" class="icon" alt="Monster with horns" id="type-eyes">
+          <h2>Periscope eyes</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt deleniti natus eveniet harum laudantium cum nam vel quo? Maiores aperiam sunt possimus velit tenetur dolorem molestiae eaque mollitia esse nobis.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cards" aria-labelledby="cards">
+    <h2 id="cards">Cards</h2>
+    <div class="wrapper">
+      <div class="card">
+        <img src="./images/card01.svg" alt="card 1">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis itaque quibusdam hic modi dicta distinctio alias reprehenderit obcaecati excepturi cum officiis vitae odio molestiae repudiandae ab, dolorum eos illum sunt.</p>
+      </div>
+      <div class="card">
+        <img src="./images/card02.svg" alt="card 2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quam quisquam at eligendi eveniet, repellat quos, sit in adipisci rem totam excepturi eius perspiciatis assumenda distinctio ea ipsa? Sequi, quod!</p>
+      </div>
+      <div class="card">
+        <img src="./images/card03.svg" alt="card 3">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae magni magnam quia ea earum et odit praesentium similique quas, expedita quo fuga aut sit molestias dolores ut id corporis necessitatibus.</p>
+      </div>
+    </div>
+  </section>
+  
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/lib/bootstrap.bundle.min.js"></script>
+  <script src="js/lib/gsap.min.js"></script>
+  <script src="js/lib/ScrollMagic.min.js"></script>
+  <script src="js/lib/plugins/animation.gsap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
