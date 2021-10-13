@@ -41,7 +41,11 @@
   color: var(--coral);
 }
 
-.fc-teal {
+.fc--charcol {
+  color: var(--charcol);
+}
+
+.fc--teal {
   color: var(--teal);
 }
 
@@ -51,7 +55,7 @@
 
 /* Basic style elements */
 body {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 html {
@@ -64,6 +68,10 @@ h1, h2, h3, h4, h5, h6 {
 
 p, a {
   font-family: var(--body);
+  font-size: 1.25rem;
+
+  line-height: 1.8;
+  text-align: left;
 }
 
 /* Site navigation */
@@ -150,6 +158,8 @@ p, a {
 
 .section {
   padding: 4rem 2rem;
+
+  overflow: hidden;
 }
 
 .section .icon {
@@ -161,9 +171,6 @@ p, a {
   padding: 1rem;
 }
 
-.content {
-  opacity: 0;
-}
 
 .inner-col {
  display: flex;
@@ -184,7 +191,7 @@ p, a {
 
 @media (min-width: 767px) {
   .inner-col {
-    max-width: 900px;
+    max-width: 950px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -200,7 +207,10 @@ p, a {
   }
 }
 
-
+.section--full {
+  min-height: 100vh;
+  padding-top: 8rem;
+}
 
 .section .inner h2 {
   text-align: center;
@@ -245,7 +255,7 @@ p, a {
 
 /* Monster group/cards */
 
-#monster-group {
+.wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -277,8 +287,13 @@ p, a {
   transform: scale(0.9);
 }
 
+/* Cards */
+
+
+
 /* Animations */
 @keyframes clear {
+
   to {
     opacity: 1;
     transform: none;
