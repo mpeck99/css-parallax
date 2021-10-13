@@ -149,7 +149,7 @@ p, a {
   background-repeat: no-repeat;
   background-size:cover;
   background-position: bottom;
-  background-image: url(./images/hero.svg);
+  background-image: url(../images/hero.svg);
 
   transform: translateY(300px) scale(1.2);
   opacity: 0;
