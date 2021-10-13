@@ -59,11 +59,65 @@
     window.requestAnimationFrame(moveHeader);
 
     let controller = new ScrollMagic.Controller();
-
+    let friendContentTween = TweenMax.from('#friend .inner', {
+      y: 400,
+      opacity: 0,
+    })
     new ScrollMagic.Scene({
       triggerElement: `#friend`,
-      offset: -150,
+      duration: '100%',
+      triggerHook: 0,
+      offset: -100
     })
-        .setClassToggle('.content', 'appear')
-        .addTo(controller);
+    .setTween(friendContentTween)
+    .setPin('#friend')
+    .addTo(controller);
+
+    // Parachute 
+    let paracuteTween = new TimelineMax()
+    paracuteTween 
+    .from('#parachute', {
+        scale: .5,
+        opacity: 0,
+        rotation: -40, 
+        x: '100%',
+        y: '-200%'
+      })
+    .to('#parachute', {
+      x: '30%',
+      y: '20%',
+      rotation: -30
+    })
+    .to('#parachute', {
+      x: '-80%',
+      y: '250%',
+      rotation: 30,
+      opacity: 0
+    })
+
+      new ScrollMagic.Scene({
+      triggerElement:  "#friend", 
+      duration: "170%",
+      triggerHook: 0,
+    })
+    .setTween(paracuteTween)
+    .addTo(controller)
+
+    let typesTween = new TimelineMax()
+
+    typesTween.from("#Types .inner .col", {
+      scale: .5,
+      opacity: 0,
+      stagger: 1
+    })
+
+    new ScrollMagic.Scene({
+      triggerElement: '#Types', 
+      triggerHook: 0,
+      duration: 300
+    })
+
+    .setPin('#Types')
+    .setTween(typesTween)
+    .addTo(controller)
   });
